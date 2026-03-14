@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "id": "minihex",
+  "version": "${version}",
+  "name": "minihex",
+  "description": "A Hexcasting addon with minigame-oriented spells.",
+  "authors": [
+    "IridescentVoid"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+  "license": "CC-BY-NC-SA 4.0",
+  "icon": "assets/minihex/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      {
+        "value": "ivoid.minihex.Minihex",
+        "adapter": "kotlin"
+      }
+    ],
+    "client": [
+      {
+        "value": "ivoid.minihex.MinihexClient",
+        "adapter": "kotlin"
+      }
+    ],
+    "fabric-datagen": [
+      {
+        "value": "ivoid.minihex.MinihexDataGenerator",
+        "adapter": "kotlin"
+      }
+    ]
+  },
+  "mixins": [
+    "minihex.mixins.json",
+    {
+      "config": "minihex.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.18.4",
+    "minecraft": "~1.20.1",
+    "java": ">=17",
+    "fabric-api": "*",
+    "fabric-language-kotlin": "*",
+    "hexcasting": ">=0.11.3",
+    "cardinal-components-base": "5.2.3",
+    "cardinal-components-entity": "5.2.3"
+  }
+}
