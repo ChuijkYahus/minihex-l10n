@@ -1,0 +1,27 @@
+{
+  "name": "minihex.book.damage_self",
+  "category": "hexcasting:minihex",
+  "icon": "minecraft:iron_sword",
+  "advancement": "hexcasting:root",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "minihex.book.damage_self.intro",
+      "flag": "!mod:hierophantics"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "minihex.book.damage_self",
+      "text": "minihex.book.damage_self.intro.compat",
+      "flag": "mod:hierophantics"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "minihex:damage_self",
+      "anchor": "minihex:damage_self",
+      "input": "num",
+      "output": "",
+      "text": "minihex.book.damage_self.desc"
+    }
+  ]
+}

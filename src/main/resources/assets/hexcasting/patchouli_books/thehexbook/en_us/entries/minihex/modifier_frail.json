@@ -1,0 +1,26 @@
+{
+  "name": "minihex.book.frail",
+  "category": "hexcasting:minihex",
+  "icon": "minecraft:textures/particle/bubble.png",
+  "advancement": "hexcasting:root",
+  "read_by_default": true,
+  "pages": [
+    "minihex.book.frail.intro",
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "minihex:modifier/frail/get",
+      "anchor": "minihex:modifier/frail/get",
+      "input": "",
+      "output": "num",
+      "text": "minihex.book.frail.get"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "minihex:modifier/frail/set",
+      "anchor": "minihex:modifier/frail/set",
+      "input": "num",
+      "output": "",
+      "text": "minihex.book.frail.set"
+    }
+  ]
+}

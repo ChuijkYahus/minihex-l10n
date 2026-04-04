@@ -1,0 +1,26 @@
+{
+  "name": "minihex.book.intangible",
+  "category": "hexcasting:minihex",
+  "icon": "minecraft:glass",
+  "advancement": "hexcasting:root",
+  "read_by_default": true,
+  "pages": [
+    "minihex.book.intangible.intro",
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "minihex:modifier/intangible/get",
+      "anchor": "minihex:modifier/intangible/get",
+      "input": "",
+      "output": "boolean",
+      "text": "minihex.book.intangible.get"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "minihex:modifier/intangible/set",
+      "anchor": "minihex:modifier/intangible/set",
+      "input": "boolean",
+      "output": "",
+      "text": "minihex.book.intangible.set"
+    }
+  ]
+}

@@ -4,26 +4,33 @@ A Hexcasting addon with minigame oriented spells.
 
 Requires: [Hex Casting](https://modrinth.com/mod/hex-casting), [Cardinal Components API](https://modrinth.com/mod/cardinal-components-api)
 
+Recommended, to enable all minihex features: [MoreIotas](https://modrinth.com/mod/moreiotas) or [Hexpose](https://modrinth.com/mod/hexpose), [Hexical](https://modrinth.com/mod/hexical), Xaero's [Minimap](https://modrinth.com/mod/xaeros-minimap) and [World Map](https://modrinth.com/mod/xaeros-world-map)
+
+Also has interop with [Hierophantics](https://modrinth.com/mod/hierophantics).
+
 ---
 
 Current features:
-- None yet!
+- Spell to damage self (in a manner similar to overcasting)
+- Personal Modifiers system. These are self-debuffs and can only be applied by the caster to themselves. Persists until
+  a relog or the Clear Modifiers pattern is used. Currently active modifiers can be viewed by hovering over an icon in the inventory.
+  Personal Modifiers can also be managed via commands.
+  - Disregard: hide certain entity types or specific entities (latter capped to 128)
+  - Disoriented: hide entity radar on Xaeros maps or disable the maps entirely
+  - Nameless: tweak nametag rendering on your screen to fully hide, or only show with direct line of sight
+  - Nearsighted: blindness, but with controllable distance. does not disable sprinting
+  - Frail: reduce max health
+  - Irrecovery: disable natural/food-based regeneration
+  - Mark: client side glowing for certain entities (capped to 128), with configurable color - fixed and pigment-based
+  - Relaxed: disable sprinting
+  - Grounded: disable jumping
+  - Intangible: disable collision with other players
+  - Busy: simply a flag that resets on re-login. can be read by any casting environment
 
 Upcoming features:
-- Spell to damage self (overcast damage type, bypasses embedded minds)
-- 'Busy' flag - any casting environment can read, but only the caster can set it on themselves. Clears on relog.
-- Personal Modifiers system. These are self-debuffs and can only be applied by the caster to themselves. Persists until
-   a relog or the Clear Modifiers pattern is used. Currently active modifiers can be viewed by hovering over an icon in the inventory.
-  - Modifier: Disregard/Modifier: Regard - hide/show certain particle types, entity types, and entities (last one capped to 100)
-  - Modifier: Disorientation - hide entity radar on Xaeros maps or disable the maps entirely
-  - Modifier: Nameless - tweak nameplate rendering on your screen to fully hide, or only show with direct line of sight
-    - TODO: this needs testing with figura
-  - Modifier: Nearsighted - blindness, but with controllable distance. does not disable sprinting and jumping by itself
-  - Modifier: Frail - reduce max health
-  - Modifier: Irrecovery - disable natural/food-based regeneration
-  - Modifier: Mark - client side glowing for certain entities, with configurable color
-  - Modifier: Relaxed - disable sprinting
-  - Modifier: Grounded - disable jumping
-  - Modifier: Intangible - disable collision with other players
-- (Considered) Displaying custom markers on maps/editing map markers via hex
-- (Considered) More nadirs for blindness, nausea, etc.
+- None confirmed yet!
+
+Possible future features:
+- Proper gradients when marking with a pigment
+- Displaying custom markers on maps/editing map markers via hex
+- More nadirs for blindness, nausea, etc.

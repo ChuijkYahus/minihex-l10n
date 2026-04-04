@@ -1,11 +1,28 @@
 {
-	"required": true,
-	"package": "ivoid.minihex.mixin.client",
-	"compatibilityLevel": "JAVA_17",
-	"client": [
-		"ExampleClientMixin"
-	],
-	"injectors": {
-		"defaultRequire": 1
-	}
+  "required": true,
+  "package": "ivoid.minihex.mixin.client",
+  "compatibilityLevel": "JAVA_17",
+  "client": [
+    "BackgroundRendererAccessor",
+    "HandledScreenAccessor",
+    "ModifierFrailInGameHudMixin",
+    "ModifierMarkMinecraftClientMixin",
+    "ModifierNamelessEntityRendererMixin",
+    "ModifierNearsightedBackgroundRendererMixin",
+    "ModifierNearsightedWorldRendererMixin",
+    "ModifierRelaxedClientPlayerEntity",
+    "PersonalModifierInventoryScreenMixin",
+    "ScreenAccessor",
+    "TexturedButtonWidgetAccessor",
+    "xaero.GuiMapMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "mixins": [
+    "ModifierDisregardEntityMixin",
+    "ModifierMarkEntityMixin",
+    "xaero.ClientConfigManagerMixin",
+    "xaero.PlayerTrackerIconRendererMixin"
+  ]
 }

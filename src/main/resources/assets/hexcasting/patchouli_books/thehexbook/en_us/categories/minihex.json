@@ -1,0 +1,6 @@
+{
+  "name": "minihex.book.category.name",
+  "description": "minihex.book.category.desc",
+  "icon": "minihex:textures/gui/hexxy_info.png",
+  "parent": "hexcasting:patterns"
+}

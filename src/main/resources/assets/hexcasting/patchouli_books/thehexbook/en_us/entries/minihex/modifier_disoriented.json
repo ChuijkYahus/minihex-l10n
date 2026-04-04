@@ -1,0 +1,26 @@
+{
+  "name": "minihex.book.disoriented",
+  "category": "hexcasting:minihex",
+  "icon": "minecraft:compass",
+  "advancement": "hexcasting:root",
+  "read_by_default": true,
+  "pages": [
+    "minihex.book.disoriented.intro",
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "minihex:modifier/disoriented/get",
+      "anchor": "minihex:modifier/disoriented/get",
+      "input": "",
+      "output": "num",
+      "text": "minihex.book.disoriented.get"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "minihex:modifier/disoriented/set",
+      "anchor": "minihex:modifier/disoriented/set",
+      "input": "num",
+      "output": "",
+      "text": "minihex.book.disoriented.set"
+    }
+  ]
+}

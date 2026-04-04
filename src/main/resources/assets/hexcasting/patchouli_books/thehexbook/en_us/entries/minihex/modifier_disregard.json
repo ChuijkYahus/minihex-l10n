@@ -1,0 +1,61 @@
+{
+  "name": "minihex.book.disregard",
+  "category": "hexcasting:minihex",
+  "icon": "minecraft:potion{Potion: \"minecraft:invisibility\"}",
+  "advancement": "hexcasting:root",
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "minihex.book.disregard.intro.missing",
+      "flag": "&!mod:moreitoas,!mod:hexpose"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "minihex:modifier/disregard/get",
+      "anchor": "minihex:modifier/disregard/get",
+      "input": "entity",
+      "output": "boolean",
+      "text": "minihex.book.disregard.get.missing",
+      "flag": "&!mod:moreiotas,!mod:hexpose"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "minihex:modifier/disregard/set",
+      "anchor": "minihex:modifier/disregard/set",
+      "input": "entity, boolean",
+      "output": "",
+      "text": "minihex.book.disregard.set.missing",
+      "flag": "&!mod:moreiotas,!mod:hexpose"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "minihex.book.disregard",
+      "text": "minihex.book.disregard.intro.compat",
+      "flag": "|mod:moreiotas,mod:hexpose"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "minihex:modifier/disregard/get",
+      "anchor": "minihex:modifier/disregard/get",
+      "input": "entity | identifier | entitytype",
+      "output": "boolean",
+      "text": "minihex.book.disregard.get.compat",
+      "flag": "|mod:moreiotas,mod:hexpose"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "minihex:modifier/disregard/set",
+      "anchor": "minihex:modifier/disregard/set",
+      "input": "disregardable, boolean",
+      "output": "",
+      "text": "minihex.book.disregard.set.compat",
+      "flag": "|mod:moreiotas,mod:hexpose"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "minihex.book.disregard.2",
+      "flag": "|mod:moreiotas,mod:hexpose"
+    }
+  ]
+}

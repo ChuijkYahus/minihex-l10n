@@ -1,0 +1,26 @@
+{
+  "name": "minihex.book.busy",
+  "category": "hexcasting:minihex",
+  "icon": "minecraft:anvil",
+  "advancement": "hexcasting:root",
+  "read_by_default": true,
+  "pages": [
+    "minihex.book.busy.intro",
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "minihex:modifier/busy/get",
+      "anchor": "minihex:modifier/busy/get",
+      "input": "player",
+      "output": "boolean",
+      "text": "minihex.book.busy.get"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "minihex:modifier/busy/set",
+      "anchor": "minihex:modifier/busy/set",
+      "input": "boolean",
+      "output": "",
+      "text": "minihex.book.busy.set"
+    }
+  ]
+}

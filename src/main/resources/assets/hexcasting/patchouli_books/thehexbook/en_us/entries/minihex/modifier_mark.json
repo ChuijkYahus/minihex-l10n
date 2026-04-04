@@ -1,0 +1,36 @@
+{
+  "name": "minihex.book.mark",
+  "category": "hexcasting:minihex",
+  "icon": "minecraft:glowstone_dust",
+  "advancement": "hexcasting:root",
+  "read_by_default": true,
+  "pages": [
+    "minihex.book.mark.intro",
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "minihex:modifier/mark/get",
+      "anchor": "minihex:modifier/mark/get",
+      "input": "entity",
+      "output": "boolean",
+      "text": "minihex.book.mark.get"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "minihex:modifier/mark/set",
+      "anchor": "minihex:modifier/mark/set",
+      "input": "target, color",
+      "output": "",
+      "text": "minihex.book.mark.set"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "minihex.book.mark.2",
+      "flag": "!mod:hexical"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "minihex.book.mark.2.compat",
+      "flag": "mod:hexical"
+    }
+  ]
+}

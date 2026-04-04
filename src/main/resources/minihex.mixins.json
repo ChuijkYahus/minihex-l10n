@@ -1,14 +1,19 @@
 {
-	"required": true,
-	"package": "ivoid.minihex.mixin",
-	"compatibilityLevel": "JAVA_17",
-	"mixins": [
-		"ExampleMixin"
-	],
-	"injectors": {
-		"defaultRequire": 1
-	},
-	"overwrites": {
-		"requireAnnotations": true
+  "required": true,
+  "package": "ivoid.minihex.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "ModifierFrailLivingEntityMixin",
+    "ModifierGroundedLivingEntityMixin",
+    "ModifierIntangibleEntityMixin",
+    "ModifierIntangibleEntityPredicatesMixin",
+    "ModifierIrrecoveryPlayerEntityMixin",
+    "hierophantics.SelfDamageHieroPlayerStateMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
 	}
 }

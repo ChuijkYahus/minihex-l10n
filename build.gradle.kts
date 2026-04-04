@@ -29,10 +29,14 @@ repositories {
     maven { url = uri("https://maven.ladysnake.org/releases") }
     maven { url = uri("https://maven.jamieswhiteshirt.com/libs-release") }
     maven { url = uri("https://mvn.devos.one/snapshots/") }
+    maven { url = uri("https://chocolateminecraft.com/maven") } // Xaero's Minimap/World Map
+    maven { url = uri("https://maven.hexxy.media/") } // MoreIotas
+	maven { url = uri("https://maven.kosmx.dev/") } // Player Animator (hexical dependency)
 }
 
 loom {
 	splitEnvironmentSourceSets()
+    accessWidenerPath = file("src/main/resources/minihex.classtweaker")
 
 	mods {
 		register("minihex") {
@@ -60,7 +64,27 @@ dependencies {
     modImplementation("dev.onyxstudios.cardinal-components-api:cardinal-components-base:${providers.gradleProperty("cca_version").get()}")
     modImplementation("dev.onyxstudios.cardinal-components-api:cardinal-components-entity:${providers.gradleProperty("cca_version").get()}")
 
-    // Hex Casting and dependencies
+    // Optional Dep: Xaeros Minimap and World Map
+    modImplementation("xaero.lib:xaerolib-fabric-${providers.gradleProperty("minecraft_version").get()}:${providers.gradleProperty("xaerolib_version").get()}")
+    modImplementation("xaero.minimap:xaerominimap-fabric-${providers.gradleProperty("minecraft_version").get()}:${providers.gradleProperty("minimap_version").get()}")
+    modImplementation("xaero.map:xaeroworldmap-fabric-${providers.gradleProperty("minecraft_version").get()}:${providers.gradleProperty("worldmap_version").get()}")
+
+	// Optional Dep: MoreIotas
+	modImplementation("ram.talia.moreiotas:moreiotas-fabric-${providers.gradleProperty("minecraft_version").get()}:${providers.gradleProperty("moreiotas_version").get()}") {
+		exclude(module = "serialization-hooks")
+	}
+
+	// Optional Dep: Hexpose
+	modImplementation("miyucomics.hexpose:hexpose:${providers.gradleProperty("hexpose_version").get()}")
+
+	// Optional Dep: Hexical (1.5.0 from modrinth, 2.0.0 needs to be manually added to mods folder)
+	modRuntimeOnly("maven.modrinth:hexical:${providers.gradleProperty("hexical_version").get()}")
+	modRuntimeOnly("dev.kosmx.player-anim:player-animation-lib-fabric:${providers.gradleProperty("player_animator_version").get()}")
+
+	// Optional Dep: Hierophantics (adds no new functionality, but we mixin to prevent some of its behavior if it is present)
+	modImplementation("robotgiggle.hierophantics:hierophantics-fabric:${providers.gradleProperty("hierophantics_version").get()}")
+
+	// Hex Casting and dependencies
     modImplementation ("at.petra-k.hexcasting:hexcasting-fabric-${providers.gradleProperty("minecraft_version").get()}:${providers.gradleProperty("hexcasting_version").get()}") {
         exclude(module = "phosphor")
         exclude(module = "lithium")

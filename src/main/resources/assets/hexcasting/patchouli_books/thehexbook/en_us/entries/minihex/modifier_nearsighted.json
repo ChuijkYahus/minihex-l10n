@@ -1,0 +1,26 @@
+{
+  "name": "minihex.book.nearsighted",
+  "category": "hexcasting:minihex",
+  "icon": "minecraft:textures/mob_effect/blindness.png",
+  "advancement": "hexcasting:root",
+  "read_by_default": true,
+  "pages": [
+    "minihex.book.nearsighted.intro",
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "minihex:modifier/nearsighted/get",
+      "anchor": "minihex:modifier/nearsighted/get",
+      "input": "",
+      "output": "num",
+      "text": "minihex.book.nearsighted.get"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "minihex:modifier/nearsighted/set",
+      "anchor": "minihex:modifier/nearsighted/set",
+      "input": "num",
+      "output": "",
+      "text": "minihex.book.nearsighted.set"
+    }
+  ]
+}

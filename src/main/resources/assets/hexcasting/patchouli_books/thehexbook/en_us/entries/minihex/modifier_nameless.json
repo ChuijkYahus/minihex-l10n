@@ -1,0 +1,26 @@
+{
+  "name": "minihex.book.nameless",
+  "category": "hexcasting:minihex",
+  "icon": "minecraft:name_tag",
+  "advancement": "hexcasting:root",
+  "read_by_default": true,
+  "pages": [
+    "minihex.book.nameless.intro",
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "minihex:modifier/nameless/get",
+      "anchor": "minihex:modifier/nameless/get",
+      "input": "",
+      "output": "num",
+      "text": "minihex.book.nameless.get"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "minihex:modifier/nameless/set",
+      "anchor": "minihex:modifier/nameless/set",
+      "input": "num",
+      "output": "",
+      "text": "minihex.book.nameless.set"
+    }
+  ]
+}
